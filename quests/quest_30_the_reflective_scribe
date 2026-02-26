@@ -2,25 +2,25 @@
 
 # Quest 27: The FizzBuzz Test
 
-for i in range(1, 101):
+for num in range(1, 101):
 
 * Loops through numbers 1 to 100 (inclusive).
 
-if i % 3 == 0 and i % 5 == 0:
+if num % 3 == 0 and num % 5 == 0:
     print("FizzBuzz")
 
-* Checks if i is divisible by both 3 and 5.
+* Checks if num is divisible by both 3 and 5.
 * If yes, prints "FizzBuzz".
 
-elif i % 3 == 0:
+elif num % 3 == 0:
     print("Fizz")
-elif i % 5 == 0:
+elif num % 5 == 0:
     print("Buzz")
 
-* Checks if i is divisible by 3 and 5, then print Fizz and Buzz respectively
+* Checks if num is divisible by 3 and 5, then print Fizz and Buzz respectively
 
 else:
-    print(i)
+    print(num)
 
 * If none of the above conditions are met, it prints the number itself.
 
@@ -103,4 +103,29 @@ Purpose: Starts the game loop when the script runs.
 
 ---
 
+# Quest 29: The Code Breaker
 
+secret_code = 42 #The correct number the user must guess
+attempts = 3 #Maximum attempts allowed
+
+for i in range(attempts):
+
+* This runs the loop 3 times since attempts = 3
+* i basically counts which attempt you're on.
+
+guess = int(input("Guess the secret code: "))
+
+* Asks the user to enter a number.
+* int() converts the input into an integer.
+
+if guess == secret_code:
+
+* If the guess equals 42, prints a success message,and break which stops the loop immediately
+
+remaining = attempts - (i + 1)
+* Calculate how many tries left
+* i + 1 because i starts at 0
+
+print("Wrong! No more attempts. Game over!")
+
+* This prints when no attempts are remaining.
